@@ -1,0 +1,15 @@
+;
+; This is the reverse zone for dns.test internal domain.
+;
+$TTL    604800
+@   IN  SOA demo-server.dns.test. root.localhost. (
+                  1     ; Serial
+             604800     ; Refresh
+              86400     ; Retry
+            2419200     ; Expire
+             604800 )   ; Negative Cache TTL
+;
+@   IN  NS  demo-server.dns.test.
+21  IN  PTR  demo-server.dns.test.
+22  IN  PTR  demo-client-1.dns.test.
+23  IN  PTR  demo-client-2.dns.test.
